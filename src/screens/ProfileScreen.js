@@ -1,10 +1,11 @@
 import React from 'react';
 import "./ProfileScreen.css"
+import Nav from "../Nav";
 
 function ProfileScreen(props) {
     return (
         <div className="profileScreen">
-            <h1>ProfileScreen</h1>
+            <Nav />
         </div>
     );
 }
