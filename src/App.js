@@ -1,16 +1,17 @@
 import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import {
+    BrowserRouter as Router,
+    Routes as Switch,
+    Route,
+} from "react-router-dom";
 import './App.css';
 import HomeScreen from './screens/HomeScreen'
-import {auth} from './firebase'
-import {
-  BrowserRouter as Router,
-  Routes as Switch,
-  Route,
-} from "react-router-dom";
 import LoginScreen from "./screens/LoginScreen";
-import {useDispatch, useSelector} from "react-redux";
-import {logout, login, selectUser} from "./features/userSlice";
+import ProfileScreen from "./screens/ProfileScreen";
+import {auth} from './firebase'
 
+import {logout, login, selectUser} from "./features/userSlice";
 
 function App() {
     const user = useSelector(selectUser)
@@ -41,8 +42,8 @@ function App() {
                 <LoginScreen />
             ) : (
                 <Switch>
-                <Route path="/" element={<HomeScreen />} />
-                <Route path="/text" element={<h1>WRLCOME</h1>} />
+                    <Route path="/" element={<HomeScreen />} />
+                    <Route exact path="/profile" element={<ProfileScreen />} />
                 </Switch>
             )}
         </Router>
