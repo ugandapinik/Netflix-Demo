@@ -8,17 +8,25 @@ import {
   Route,
 } from "react-router-dom";
 import LoginScreen from "./screens/LoginScreen";
+import {useDispatch, useSelector} from "react-redux";
+import {logout, login, selectUser} from "./features/userSlice";
 
 
 function App() {
-    const user = null
+    const user = useSelector(selectUser)
+     const dispatch = useDispatch()
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((userAuth) => {
             if (userAuth){
                 console.log(userAuth)
+                dispatch(login({
+                    uid: userAuth.uid,
+                    email: userAuth.email
+                }))
             }else{
                 // Logged out
+                dispatch(logout)
             }
         })
 
