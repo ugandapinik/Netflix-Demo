@@ -1,10 +1,11 @@
-import React, { useRef } from 'react';
+import React, {useRef} from 'react';
 import "./SignUpScreen.css"
 import { auth } from "../firebase";
 
 function SignUpScreen() {
     const emailRef = useRef(null)
     const passwordRef = useRef(null)
+
 
 
     const register = (e) => {
