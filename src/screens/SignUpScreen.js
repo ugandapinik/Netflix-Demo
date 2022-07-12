@@ -1,9 +1,24 @@
-import React, {useState} from 'react';
+import React, { useRef } from 'react';
 import "./SignUpScreen.css"
+import { auth } from "../firebase";
 
 function SignUpScreen() {
+    const emailRef = useRef(null)
+    const passwordRef = useRef(null)
+
+
     const register = (e) => {
         e.preventDefault();
+
+        auth.createUserWithEmailAndPassword(
+            emailRef.current.value,
+            passwordRef.current.value
+        ).then((authUser) => {
+            console.log("Register success")
+            console.log(authUser)
+        }).catch((error) => {
+            alert(error.message)
+        })
 
     }
 
@@ -16,10 +31,12 @@ function SignUpScreen() {
             <form>
                 <h1>Sign In</h1>
                 <input
+                    ref={emailRef}
                     type="email"
                     placeholder="Email" />
 
                 <input
+                    ref={passwordRef}
                     type="password"
                     placeholder="Password" />
 
