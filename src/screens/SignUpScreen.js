@@ -1,7 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./SignUpScreen.css"
 
 function SignUpScreen() {
+    const register = (e) => {
+        e.preventDefault();
+
+    }
+
+    const signIn = (e) => {
+        e.preventDefault();
+    }
 
     return (
         <div className="signUpScreen">
@@ -17,7 +25,9 @@ function SignUpScreen() {
 
                 <button type="submit">Sign In</button>
 
-                <h4></h4>
+                <h4>
+                    <span className="signUpScreen__gray">New to Netflix? </span>
+                    <span className="signUpScreen__link">Sign up now!</span></h4>
             </form>
         </div>
     );

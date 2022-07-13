@@ -30,3 +30,18 @@
     font-width: 600;
     margin-top: 20px;
 }
+
+
+.signUpScreen > form > h4 {
+    text-align: left;
+    margin-top: 25px;
+}
+
+.signUpScreen__gray {
+    color: gray;
+}
+
+.signUpScreen__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
