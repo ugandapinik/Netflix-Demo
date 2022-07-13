@@ -23,11 +23,13 @@ function SignUpScreen() {
                     type="password"
                     placeholder="Password" />
 
-                <button type="submit">Sign In</button>
+                <button
+                    type="submit"
+                    onClick={signIn}>Sign In</button>
 
                 <h4>
                     <span className="signUpScreen__gray">New to Netflix? </span>
-                    <span className="signUpScreen__link">Sign up now!</span></h4>
+                    <span className="signUpScreen__link" onClick={register}>Sign up now!</span></h4>
             </form>
         </div>
     );
