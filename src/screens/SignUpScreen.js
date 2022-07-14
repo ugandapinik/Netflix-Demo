@@ -1,9 +1,24 @@
 import React from 'react';
+import "./SignUpScreen.css"
 
-function SignUpScreen(props) {
+function SignUpScreen() {
+
     return (
-        <div children="signUpScreen">
-            <h1>Sign Up Screen</h1>
+        <div className="signUpScreen">
+            <form>
+                <h1>Sign In</h1>
+                <input
+                    type="email"
+                    placeholder="Email" />
+
+                <input
+                    type="password"
+                    placeholder="Password" />
+
+                <button type="submit">Sign In</button>
+
+                <h4></h4>
+            </form>
         </div>
     );
 }
