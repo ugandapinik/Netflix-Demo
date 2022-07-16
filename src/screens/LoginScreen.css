@@ -66,9 +66,25 @@
 .loginScreen__body h3 {}
 
 /* LoginScreen: form*/
+.loginScreen__input {
+    margin-top: 20px;
+}
+
 .loginScreen__email{
     padding: 10px;
     outline-width: 0;
+    height: 30px;
+    width: 30%;
+    border: none;
+    max-width: 600px;
+}
 
-
+.loginScreen__getStarted {
+    padding: 16px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
 }
