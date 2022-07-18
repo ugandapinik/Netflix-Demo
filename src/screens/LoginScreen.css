@@ -37,3 +37,38 @@
         rgba(0, 0, 0, 0.8) 100%
     );
 }
+
+/* loginScreen body */
+.loginScreen__body {
+    position: absolute;
+    top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+    padding: 20px;
+    left: 0;
+    right: 0;
+}
+
+.loginScreen__body h1 {
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+}
+
+.loginScreen__body h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.loginScreen__body h3 {}
+
+/* LoginScreen: form*/
+.loginScreen__email{
+    padding: 10px;
+    outline-width: 0;
+
+
+}
