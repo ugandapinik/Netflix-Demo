@@ -6,17 +6,21 @@ import {
   Routes as Switch,
   Route,
 } from "react-router-dom";
+import LoginScreen from "./screens/LoginScreen";
 
 
 function App() {
 
-    const user = null
+    const user = {
+        usernames: "jewel",
+        password: "password"
+    }
 
     return (
     <div className="app">
         <Router>
             {! user ? (
-                <Login />
+                <LoginScreen />
             ) : (
                 <Switch>
                 <Route path="/" element={<HomeScreen />} />
