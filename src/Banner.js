@@ -2,25 +2,56 @@ import React from 'react'
 import "./Banner.css"
 
 function Banner() {
+    
+
+    function truncate (string, length) {
+        return string.length > length ? string.substr(0, length - 1) + '...' : string
+    }
+
+
     return (
     <header className="banner" style={{
         backgroundSize: "cover",
-        backgroundImage: `url('https://i.imgur.com/e1hLQ2m.png')`,
+        backgroundImage: `url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_flag.svg/1200px-Black_flag.svg.png')`,
         backgroundPosition: "center center"
     }}>
         
         <div className="banner__contents">
             <h1 className="banner__title">Movie Name</h1>
 
-            <div className="banner_buttons">
-                <button className="banner_button">Play</button>
-                <button className="banner_button">My List</button>
+            <div className="banner__buttons">
+                <button className="banner__button">Play</button>
+                <button className="banner__button">My List</button>
             </div>
 
-            <h1 className="banner__description">This is a test description</h1>
+            <h1 className="banner__description">{
+                truncate(`
+                    This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description
+                This is a test description`, 140
+                )
+            }</h1>
+            
         </div>
 
-        <div className="banner--fadeBottom"/>
+        <div className="banner--fadeBottom" />
     </header>
     )
 }
