@@ -2,25 +2,21 @@ import React from 'react';
 import './App.css';
 import HomeScreen from './HomeScreen' 
 import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
+  BrowserRouter,
+  Routes,
+  Route,
 } from "react-router-dom";
 
 
 function App() {
   return (
     <div className="app">
-        <HomeScreen />
-
-        <Router>
-            <Switch>
-                <Route path="/about"><About /></Route>
-                <Route path="/users"><Users /></Route>
-                <Route path="/"><Home /></Route>
-            </Switch>
-        </Router>
-
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomeScreen />} />
+              <Route path="/text" element={<h1>WRLCOME</h1>} />
+          </Routes>
+        </BrowserRouter>
     </div>
   );
 }
