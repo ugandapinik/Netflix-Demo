@@ -15,6 +15,7 @@ function HomeScreen() {
         {/* Banner */}
         <Banner />
 
+
         {/* Rows */}
         <Row 
           title="NETFLIX ORIGINALS"
