@@ -1,10 +1,10 @@
 import React from 'react'
 import './HomeScreen.css'
-import requests from './Requests'
+import requests from '../Requests'
 
-import Banner from './Banner'
-import Nav from './Nav'
-import Row from './Row'
+import Banner from '../Banner'
+import Nav from '../Nav'
+import Row from '../Row'
 
 function HomeScreen() {
   return (
