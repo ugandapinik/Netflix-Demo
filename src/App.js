@@ -11,10 +11,7 @@ import LoginScreen from "./screens/LoginScreen";
 
 function App() {
 
-    const user = {
-        usernames: "jewel",
-        password: "password"
-    }
+    const user = null
 
     return (
     <div className="app">
