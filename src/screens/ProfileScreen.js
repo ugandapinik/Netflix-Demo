@@ -25,7 +25,6 @@ function ProfileScreen() {
 
                     <div className="profileScreen__plans">
                         <h3>Plans</h3>
-                        <p></p>
 
                         <button onClick={() => auth.signOut() } className="profileScreen__signOut">Sign Out</button>
                     </div>
